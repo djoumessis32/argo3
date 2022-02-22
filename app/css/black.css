@@ -1,0 +1,36 @@
+/**SKIN NOIR**/
+
+/*Basic*/
+html										{background:#222;}
+body, a, button, .sLink						{color:#d5d5d5;}
+a:hover, .sLink:hover						{color:#f77;}
+a:active, .sLinkSelect, input:checked+label	{color:#f77;}
+/*Pages principales Responsives (cf. 'VueStructure.php')*/
+@media screen and (max-width:1023px){
+	#htmlMainPage	{background:#222 url(../img/logoMobileBg.png) no-repeat center 90%; height:100%;}
+}
+
+/*Blocks d'objet (ou pas) & menus contextuels*/
+.menuContext .menuLine:hover, .sTableRow:hover, .sLineSelect	{background:#333;}/*survol une ligne de menu (affectation ou autre)*/
+.objContainer, .miscContainer, .emptyContainer, .menuContext	{background:linear-gradient(135deg,#444,#222 100px); background-color:#222;}
+.objContainerSelect												{background:#444!important;}/*plus "important" que le ":hover"*/
+.objLines .objContainer											{border-bottom:solid 1px #333;}
+.objLines .objContainer:hover, .objLines .alternateLines:nth-child(odd), .objHover:hover		{background:#333; background-image:none;}/*lignes survolées et lignes impaires*/
+.objLines .alternateLines:nth-child(even)						{background:#222;}/*ligne paire*/
+.objBlocks .hasThumb .objLabel									{background:rgba(0,0,0,0.95);}
+.emptyContainer													{background:rgba(0,0,0,0.7);}
+
+/*Droits d'accès d'utilisateurs*/
+.sAccessRead		{color:#9bf;}
+.sAccessWriteLimit	{color:#e55;}
+.sAccessWrite		{color:#d55;}
+
+/*Divers*/
+.lightboxBlock, .lightboxBlockTitle, .objMenuLabel	{border:#444 solid 1px;}
+.objMenuLabel										{background:linear-gradient(180deg,#444,#111);}
+.lightboxBlockTitle									{border-bottom:#222 solid 1px; background:#222;}
+#headerBar											{background:linear-gradient(to bottom,#222,#333,#222);}
+#sortableModules .ui-state-default					{background:linear-gradient(#111,#000);}
+hr													{background:linear-gradient(to right,#555,#999,#555);}
+div::-webkit-scrollbar								{background:#333; width:12px;}/*scrollbar: background et width*/
+div::-webkit-scrollbar-thumb						{background:#888;}/*scrollbar: couleur de la barre*/
